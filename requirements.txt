@@ -1,0 +1,9 @@
+SpeechRecognition
+PyAudio
+pyttsx3
+vosk
+colorama 
+playsound==1.2.2
+pyautogui 
+pywin32
+winshell 

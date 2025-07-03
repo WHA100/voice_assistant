@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "C:\all\arch linux\home\ai assistent\voice_assistant.py", line 351, in _listen
+    on_result(text)
+    ~~~~~~~~~^^^^^^
+  File "C:\all\arch linux\home\ai assistent\voice_assistant.py", line 482, in on_result
+    action()
+    ~~~~~~^^
+  File "C:\all\arch linux\home\ai assistent\voice_assistant.py", line 548, in <lambda>
+    'звук 20': ('Устанавливаю громкость на 20%.', lambda: set_volume(20)),
+                                                          ~~~~~~~~~~^^^^
+  File "C:\all\arch linux\home\ai assistent\voice_assistant.py", line 534, in set_volume
+    subprocess.call(['nircmd.exe', 'setsysvolume', str(value)])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 395, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1554, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Не удается найти указанный файл
+
